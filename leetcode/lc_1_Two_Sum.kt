@@ -22,6 +22,8 @@
 //Only one valid answer exists.
 //
 //Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+package leetcode
+
 
 fun main(args: Array<String>) {
     var nums = arrayOf(2, 7, 11, 15)
@@ -42,4 +44,5 @@ fun main(args: Array<String>) {
     println(Solution().twoSum(nums, target).contentToString())
 
 }
+
 
