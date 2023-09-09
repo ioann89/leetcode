@@ -24,7 +24,6 @@
 //Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 package leetcode
 
-
 fun main(args: Array<String>) {
     var nums = arrayOf(2, 7, 11, 15)
     var target = 9
