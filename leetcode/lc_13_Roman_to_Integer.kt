@@ -54,31 +54,68 @@ fun main(args: Array<String>) {
         'M' to 1000
     )
 
-
-    var s = "MCMXCIV"
+    //var s = "III"
+    //var s = "LVIII" //50+8=58
+    var s = "MCMXCIV" //1000+900+90+4=1994
     var sum = 0
+    var flag = true
+
     fun romanToInt(s: String): Int {
+
         var index = 0
+
         for (char in s) {
 
-            index += 1
+            index++
+            if (flag == false) {
+                flag = true
+                continue
+            }
+
+            if (index == s.length
+                || char == 'D'
+                || char == 'M'
+                || char == 'L'
+                || char == 'V') {
+                sum += map[char]!!
+                continue
+            }
 
             when (char) {
+
                 'I' -> {
-                    if (s[index] == 'V') sum += 4
-                    else if (s[index] == 'X') sum += 9
+                    if (s[index] == 'V') {
+                        sum += 4
+                        flag = false
+                    }
+                    else if (s[index] == 'X') {
+                        sum += 9
+                        flag = false
+                    }
                     else sum += map[char]!!
                 }
 
                 'X' -> {
-                    if (s[index] == 'L') sum += 40
-                    else if (s[index] == 'C') sum += 90
+                    if (s[index] == 'L') {
+                        sum += 40
+                        flag = false
+                    }
+                    else if (s[index] == 'C') {
+                        sum += 90
+                        flag = false
+                    }
                     else sum += map[char]!!
                 }
 
                 'C' -> {
-                    if (s[index] == 'D') sum += 400
-                    else if (s[index] == 'M') sum += 900
+                    if (s[index] == 'D') {
+                        sum += 400
+                        flag = false
+                    }
+                    else if (s[index] == 'M') {
+                        sum += 900
+                        flag = false
+                    }
                     else sum += map[char]!!
                 }
 
@@ -88,5 +125,6 @@ fun main(args: Array<String>) {
     }
     println(romanToInt(s))
 }
-//Чтобы сделать красиво пришлось прям подумать!!!
+//Посмотрел чужие решения и заплакал!!!
+
 
