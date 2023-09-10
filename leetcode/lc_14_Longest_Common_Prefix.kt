@@ -19,7 +19,27 @@
 package leetcode
 
 fun main(args: Array<String>) {
+
+    var strs = arrayOf("flower", "flow", "flight")
+
     fun longestCommonPrefix(strs: Array<String>): String {
 
+        if (strs.count() == 0) return ""
+
+        var prefix = strs[0]
+
+        for (i in 0 until strs.size) {
+            while (strs[i].indexOf(prefix) != 0) {
+                prefix = prefix.substring(0, prefix.length - 1)
+            }
+        }
+
+        return prefix
     }
+
+    println(longestCommonPrefix(strs))
 }
+
+
+//боже мой какая боль
+//решение пришлось смотреть здесь https://www.youtube.com/watch?v=bl8ue-dTxgs
