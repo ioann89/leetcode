@@ -19,4 +19,7 @@
 package leetcode
 
 fun main(args: Array<String>) {
+    fun longestCommonPrefix(strs: Array<String>): String {
+
+    }
 }
