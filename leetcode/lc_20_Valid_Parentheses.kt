@@ -27,9 +27,13 @@
 package leetcode
 
 fun main(args: Array<String>) {
+
     val s = "()[]{}"
 
     fun isValid(s: String): Boolean {
 
+        return false
     }
+
+    println(isValid(s))
 }
