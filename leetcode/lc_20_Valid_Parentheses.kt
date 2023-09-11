@@ -28,11 +28,24 @@ package leetcode
 
 fun main(args: Array<String>) {
 
-    val s = "()[]{}"
-
+    //val s = "()[]{}"
+    val s = "(]"
+    var flag = false
     fun isValid(s: String): Boolean {
-
-        return false
+        for (i in 0 until s.length step 2) {
+            val char = s[i]
+            val char2 = s[i + 1]
+            if (char == '(' && char2 == ')') {
+                flag = true
+            } else if (char == '{' && char2 == '}') {
+                flag = true
+            } else if (char == '[' && char2 == ']') {
+                flag = true
+            } else {
+                flag = false
+            }
+        }
+        return flag
     }
 
     println(isValid(s))
