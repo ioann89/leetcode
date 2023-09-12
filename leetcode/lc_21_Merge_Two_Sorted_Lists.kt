@@ -24,5 +24,40 @@
 package leetcode
 
 fun main(args: Array<String>) {
-    
+    var list1 = ListNode(1, 2, 4)
+    var list2 = ListNode(1, 3, 4)
+
+    fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode.ListNode? {
+
+        var temp_node = ListNode(0)
+        var current_node = temp_node
+        var list1 = list1
+        var list2 = list2
+
+        while (list1 != null && list2 != null) {
+            if (list1.`val` < list2.`val`) {
+                current_node.next = list1
+                list1 = list1.next
+            } else {
+                current_node.next = list2
+                list2 = list2.next
+            }
+            current_node = current_node.next!!
+        }
+
+        if (list1 != null) {
+            current_node.next = list1
+        }
+        if (list2 != null) {
+            current_node.next = list2
+
+        }
+        return temp_node.next
+
+    }
 }
+
+//объяснение здесь: https://www.youtube.com/watch?v=KVf1Uuqfv8E
+//код работает, но не в ide)))
+
+
