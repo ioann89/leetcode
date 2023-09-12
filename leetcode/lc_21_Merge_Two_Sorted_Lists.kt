@@ -24,9 +24,6 @@
 package leetcode
 
 fun main(args: Array<String>) {
-    var list1 = ListNode(1, 2, 4)
-    var list2 = ListNode(1, 3, 4)
-
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode.ListNode? {
 
         var temp_node = ListNode(0)
