@@ -40,3 +40,5 @@ fun main(args: Array<String>) {
     }
     return arr.size
 }
+
+//полезный видосик https://www.youtube.com/watch?v=LKAnG6JedWI
