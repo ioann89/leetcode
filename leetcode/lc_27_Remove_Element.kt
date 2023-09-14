@@ -41,5 +41,18 @@
 package leetcode
 
 fun main(args: Array<String>) {
+    fun removeElement(nums: IntArray, `val`: Int): Int {
+        if(nums.size == 0) return 0
 
+        var index = 0
+        for(item in nums){
+            if (item != `val`) {
+                nums[index] = item
+                index++
+            }
+        }
+        return index
+    }
 }
+
+//Дурдом
