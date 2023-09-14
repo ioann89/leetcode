@@ -34,11 +34,14 @@
 package leetcode
 
 fun main(args: Array<String>) {
-    val arr = nums.distinct()//Избавляемся от дубликатов
-    for (i in arr.indices) {
-        nums[i] = arr[i]//Перезаписываем старый массив
+    fun removeDuplicates(nums: IntArray): Int {
+        val arr = nums.distinct()
+
+        for (i in arr.indices) {
+            nums[i] = arr[i]
+        }
+        return arr.size
     }
-    return arr.size
 }
 
 //полезный видосик https://www.youtube.com/watch?v=LKAnG6JedWI
