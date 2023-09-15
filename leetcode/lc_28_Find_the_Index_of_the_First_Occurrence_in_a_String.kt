@@ -21,6 +21,21 @@ package leetcode
 
 fun main(args: Array<String>) {
     fun strStr(haystack: String, needle: String): Int {
-        return
+        return haystack.indexOf(needle)
     }
 }
+
+
+//ну или так
+//
+//fun strStr(haystack: String, needle: String): Int {
+//
+//    var hL = haystack.length
+//    var nL = needle.length-1
+//
+//    for(i in 0 until hL-nL) {
+//        val subString = haystack.substring(i .. i+nL)
+//        if(subString == needle) return i
+//    }
+//    return -1
+//}
