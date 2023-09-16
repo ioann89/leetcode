@@ -35,7 +35,6 @@ fun main(args: Array<String>) {
             } else {
                 right = mid - 1
             }
-
         }
         return left
     }
