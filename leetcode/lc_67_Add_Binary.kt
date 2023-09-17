@@ -18,5 +18,6 @@ package leetcode
 fun main(args: Array<String>) {
     fun addBinary(a: String, b: String): String {
 
+        return ""
     }
 }
