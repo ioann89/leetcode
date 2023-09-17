@@ -26,10 +26,12 @@
 package leetcode
 
 fun main(args: Array<String>) {
-    var s = "Hello World"
-    fun lengthOfLastWord(s: String): Int {
+    var s = "   fly me   to   the moon  "
 
-        return 0
+    fun lengthOfLastWord(s: String): Int {
+        val res = s.trim().split(" ")
+        val str = res[res.size-1]
+        return str.length
     }
     println(lengthOfLastWord(s))
 }
