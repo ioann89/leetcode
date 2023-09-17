@@ -32,5 +32,7 @@
 package leetcode
 
 fun main(args: Array<String>) {
+    fun plusOne(digits: IntArray): IntArray {
 
+    }
 }
