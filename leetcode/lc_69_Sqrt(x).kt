@@ -20,8 +20,23 @@
 package leetcode
 
 fun main(args: Array<String>) {
+    var x = 2147395599
     fun mySqrt(x: Int): Int {
+        if (x == 0) return 0
 
-        return 0
+        var left: Long = 1
+        var right = x
+        var pivot: Long = 0
+
+        while (right - left > 1) {
+            pivot = (right + left) / 2
+            if (pivot * pivot > x) right = pivot.toInt()
+            else left = pivot
+        }
+        return left.toInt()
     }
+    println(mySqrt(x))
 }
+
+
+//Полноценный разбор задачи: https://www.youtube.com/watch?v=giT4bzi-zwk
