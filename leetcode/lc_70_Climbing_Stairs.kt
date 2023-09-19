@@ -22,8 +22,15 @@
 package leetcode
 
 fun main(args: Array<String>) {
+    val n = 45
     fun climbStairs(n: Int): Int {
+        if (n==1) return 1
+
 
         return 0
     }
+    println(climbStairs(n))
 }
+
+
+//Полноценный разбор задачи: https://www.youtube.com/watch?v=2WKsL1TW5eg
