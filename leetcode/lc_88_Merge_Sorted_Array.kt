@@ -39,16 +39,6 @@ fun main(args: Array<String>) {
     var n = 3
 // [1,2,2,3,5,6]
 
-    //    var nums1 = intArrayOf(1)
-//    var m = 1
-//    var nums2 = intArrayOf()
-//    var n = 0
-// [1]
-//    var nums1 = intArrayOf(0)
-//    var m = 0
-//    var nums2 = intArrayOf(1)
-//    var n = 1
-// [1]
     fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
         var fl = 0
         for (i in m until nums1.size) {
@@ -61,3 +51,4 @@ fun main(args: Array<String>) {
     }
     merge(nums1, m, nums2, n)
 }
+
