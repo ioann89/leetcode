@@ -43,10 +43,26 @@ fun main(args: Array<String>) {
     var v = ti.`val`
 
     fun inorderTraversal(root: TreeNode?): List<Int> {
+        var stack = mutableListOf<TreeNode>()
+        var out_arr = mutableListOf<Int>()
 
+        if (root == null) return out_arr
+
+        var current = root
+
+        while (current != null || !stack.isEmpty()) {
+            while (current != null) {
+                stack.add(current)
+                current = current.left
+            }
+            current = stack.removeAt(stack.size - 1)
+            out_arr.add(current.`val`)
+            current = current.right
+        }
+        return out_arr
     }
 }
 
 
-
 //Смотреть сюда: https://www.youtube.com/watch?v=WZwNoTm_9d8
+//ничего, не понятно, но очень интересно.
