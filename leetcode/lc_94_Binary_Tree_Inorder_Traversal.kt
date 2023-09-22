@@ -18,8 +18,35 @@
 //
 //Follow up: Recursive solution is trivial, could you do it iteratively?
 
+/**
+ * Example:
+ * var ti = TreeNode(5)
+ * var v = ti.`val`
+ * Definition for a binary tree node.
+ * class TreeNode(var `val`: Int) {
+ *     var left: TreeNode? = null
+ *     var right: TreeNode? = null
+ * }
+ */
+
 package leetcode
+
 
 fun main(args: Array<String>) {
 
+    class TreeNode(var `val`: Int) {
+        var left: TreeNode? = null
+        var right: TreeNode? = null
+    }
+
+    var ti = TreeNode(5)
+    var v = ti.`val`
+
+    fun inorderTraversal(root: TreeNode?): List<Int> {
+
+    }
 }
+
+
+
+//Смотреть сюда: https://www.youtube.com/watch?v=WZwNoTm_9d8
