@@ -41,7 +41,11 @@ class TreeNode(var `val`: Int) {
 
 fun main(args: Array<String>) {
     fun isSameTree(p: TreeNode?, q: TreeNode?): Boolean {
-
-    return true
+        if (p == null && q == null) return true
+        if (p == null || q == null) return false
+        if (p.`val` != q.`val`) return false
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)//Ты знаешь, что такое БЕЗУМИЕ? То есть рекурсия?
     }
 }
+
+//Индус всё рассказал: https://www.youtube.com/watch?v=d3X7TtN1FB8
