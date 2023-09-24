@@ -27,8 +27,6 @@ fun main(args: Array<String>) {
         var right: TreeNode? = null
     }
 
-    val root = arrayOf(1, 2, 2, 3, 4, 4, 3)
-
     fun isMirror(t1: TreeNode?, t2: TreeNode?): Boolean {
         if (t1 == null || t2 == null) return t1 == t2
         if (t1.`val` != t2.`val`) return false
