@@ -18,7 +18,6 @@
 package leetcode
 
 
-
 fun main(args: Array<String>) {
     var ti = TreeNode(5)
     var v = ti.`val`
@@ -28,8 +27,20 @@ fun main(args: Array<String>) {
         var right: TreeNode? = null
     }
 
-    fun isSymmetric(root: TreeNode?): Boolean {
+    val root = arrayOf(1, 2, 2, 3, 4, 4, 3)
 
-        return true
+    fun isMirror(t1: TreeNode?, t2: TreeNode?): Boolean {
+        if (t1 == null || t2 == null) return t1 == t2
+        if (t1.`val` != t2.`val`) return false
+
+        return isMirror(t1.left, t2.right)
+                && isMirror(t1.right, t2.left)
+    }
+
+    fun isSymmetric(root: TreeNode?): Boolean {
+        return root == null || isMirror(root, root)
     }
 }
+
+
+//смотреть, что да как, тут: https://www.youtube.com/watch?v=-5E5Jt_HKLc //немного пришлось подправить
