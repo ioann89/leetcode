@@ -25,9 +25,11 @@
 
 package leetcode
 
+import kotlin.math.max
+
 fun main(args: Array<String>) {
     fun maxDepth(root: TreeNode?): Int {
-
-        return 0
+        if (root == null) return 0
+        return 1 + max(maxDepth(root.left), maxDepth(root.right))
     }
 }
