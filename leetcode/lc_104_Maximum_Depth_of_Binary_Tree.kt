@@ -12,6 +12,22 @@
 //Constraints:
 //The number of nodes in the tree is in the range [0, 104].
 //-100 <= Node.val <= 100
+/**
+ * Example:
+ * var ti = TreeNode(5)
+ * var v = ti.`val`
+ * Definition for a binary tree node.
+ * class TreeNode(var `val`: Int) {
+ *     var left: TreeNode? = null
+ *     var right: TreeNode? = null
+ * }
+ */
 
 package leetcode
 
+fun main(args: Array<String>) {
+    fun maxDepth(root: TreeNode?): Int {
+
+        return 0
+    }
+}
