@@ -16,11 +16,37 @@
 //1 <= nums.length <= 104
 //-104 <= nums[i] <= 104
 //nums is sorted in a strictly increasing order.
+/**
+ * Example:
+ * var ti = TreeNode(5)
+ * var v = ti.`val`
+ * Definition for a binary tree node.
+ * class TreeNode(var `val`: Int) {
+ *     var left: TreeNode? = null
+ *     var right: TreeNode? = null
+ * }
+ */
 
 package leetcode
 
+//Не черта не понятно, что куда, зачем?
 fun main(args: Array<String>) {
-    fun sortedArrayToBST(nums: IntArray): TreeNode? {
-
-    }
+    val node = sortedArrayToBST(intArrayOf(-10, -3, 0, 5, 9))
 }
+
+fun sortedArrayToBST(nums: IntArray): TreeNode? {
+    return buildTree(nums, 0, nums.size - 1)
+}
+
+fun buildTree(nums: IntArray, start: Int, end: Int): TreeNode? {
+
+    if (start > end) return null
+    val mid = (start + end) / 2
+    val node = TreeNode(nums[mid])
+    node.left = buildTree(nums, start, mid - 1)
+    node.right = buildTree(nums, mid + 1, end)
+    return node
+}
+
+
+//что да как: https://www.youtube.com/watch?v=12omz-VAyRk
