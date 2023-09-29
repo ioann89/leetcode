@@ -29,23 +29,23 @@
 package leetcode
 
 fun main(args: Array<String>) {
-    fun height(root: TreeNode?): Int {
-        if (root == null) {
-            return 0
-        }
-        val hLeft = height(root.left);
-        if (hLeft < 0) {
-            return -1
-        }
-        val hRight = height(root.right);
-        if (hRight < 0 || abs(hLeft - hRight) > 1) {
-            return -1
-        }
-        return max(hLeft, hRight) + 1
-    }
-
-
-    fun isBalanced(root: TreeNode?): Boolean {
-        return height(root) >= 0
-    }
+//    fun height(root: TreeNode?): Int {
+//        if (root == null) {
+//            return 0
+//        }
+//        val hLeft = height(root.left);
+//        if (hLeft < 0) {
+//            return -1
+//        }
+//        val hRight = height(root.right);
+//        if (hRight < 0 || abs(hLeft - hRight) > 1) {
+//            return -1
+//        }
+//        return max(hLeft, hRight) + 1
+//    }
+//
+//
+//    fun isBalanced(root: TreeNode?): Boolean {
+//        return height(root) >= 0
+//    }
 }
