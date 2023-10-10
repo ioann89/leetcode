@@ -19,7 +19,7 @@
 package leetcode
 
 fun main(args: Array<String>) {
-    var nums = intArrayOf(1,1,1,3,3,4,3,2,4,2)
+    var nums = intArrayOf(1,2,3,4)
     fun containsDuplicate(nums: IntArray): Boolean {
         var dub = nums.distinct().size
         return dub != nums.size
