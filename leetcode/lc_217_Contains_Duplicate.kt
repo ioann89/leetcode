@@ -19,5 +19,9 @@
 package leetcode
 
 fun main(args: Array<String>) {
+    var nums = arrayOf(1,1,1,3,3,4,3,2,4,2)
+    fun containsDuplicate(nums: IntArray): Boolean {
 
+    }
+    println(containsDuplicate(nums))
 }
